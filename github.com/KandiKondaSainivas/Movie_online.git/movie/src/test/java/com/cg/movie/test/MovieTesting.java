@@ -24,9 +24,9 @@ class MovieTesting {
 	public void testAddTheater() throws MovieException {
 		theater = new Theater(2134, "shiva", "hyderbad", null, null, "rahul", "9876543210");
 
-		Theater th = adminDao.addTheater(theater);
+		Theater theater1 = adminDao.addTheater(theater);
 
-		assertEquals(2134, th.getTheaterId());
+		assertEquals(2134, theater1.getTheaterId());
 
 	}
 

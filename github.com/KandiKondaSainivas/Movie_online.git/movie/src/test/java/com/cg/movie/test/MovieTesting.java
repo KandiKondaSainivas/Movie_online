@@ -21,7 +21,7 @@ class MovieTesting {
 	}
 
 	@Test
-	public void testAddTheater() throws Exception {
+	public void testAddTheater() throws MovieException {
 		theater = new Theater(2134, "shiva", "hyderbad", null, null, "rahul", "9876543210");
 
 		Theater th = adminDao.addTheater(theater);
@@ -31,7 +31,7 @@ class MovieTesting {
 	}
 
 	@Test
-	public void testAddTheaterException() throws Exception {
+	public void testAddTheaterException() throws MovieException {
 		theater = new Theater(2134, "shiva", "hyderabad", null, null, "rahul", "9876543210");
 
 		adminDao.addTheater(theater);
@@ -41,7 +41,7 @@ class MovieTesting {
 	}
 
 	@Test
-	public void testDeleteTheater() throws Exception {
+	public void testDeleteTheater() throws MovieException {
 		theater = new Theater(2134, "shiva", "hyderabad", null, null, "rahul", "9876543210");
 		adminDao.addTheater(theater);
 		boolean flag = adminDao.deleteTheater(2134);
@@ -50,7 +50,7 @@ class MovieTesting {
 	}
 
 	@Test
-	public void testDeleteTheaterException() throws Exception {
+	public void testDeleteTheaterException() throws MovieException {
 		theater = new Theater(2134, "shiva", "hyderabad", null, null, "rahul", "9876543210");
 		adminDao.addTheater(theater);
 		assertThrows(MovieException.class, () -> adminDao.deleteTheater(2234));

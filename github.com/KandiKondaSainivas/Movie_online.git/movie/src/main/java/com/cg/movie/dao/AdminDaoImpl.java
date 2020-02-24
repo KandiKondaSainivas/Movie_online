@@ -1,13 +1,7 @@
 package com.cg.movie.dao;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
-
-import com.cg.movie.bean.Movie;
-import com.cg.movie.bean.Screen;
-import com.cg.movie.bean.Show;
 import com.cg.movie.bean.Theater;
 import com.cg.movie.exception.MovieException;
 

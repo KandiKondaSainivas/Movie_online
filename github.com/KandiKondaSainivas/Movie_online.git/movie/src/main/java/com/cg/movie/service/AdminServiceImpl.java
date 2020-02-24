@@ -35,21 +35,21 @@ public class AdminServiceImpl implements AdminService {
 			throw new MovieException("City Name must be entered ");
 		}
 
-		String mname = theater.getManagerName();
-		boolean flag2 = validateName(mname);
+		String managername = theater.getManagerName();
+		boolean flag2 = validateName(managername);
 
 		if (flag2 == true) {
 			throw new MovieException("Manager Name must be entered ");
 		}
-		String mcontact = theater.getManagerContact();
-		boolean flag3 = validateContact(mcontact);
+		String managercontact = theater.getManagerContact();
+		boolean flag3 = validateContact(managercontact);
 
 		if (flag3 == false) {
 			throw new MovieException("Manager Contact Number must be 10 digits");
 		}
-		Theater th = adminDao.addTheater(theater);
+		Theater theater1 = adminDao.addTheater(theater);
 
-		return th;
+		return theater1;
 	}
 
 	@Override
